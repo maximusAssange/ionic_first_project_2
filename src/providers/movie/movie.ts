@@ -14,8 +14,8 @@ export class MovieProvider {
   films: Observable<any>;
   baseUrl: String;
   apiKey: string;
-  query: string;
-
+  query: string; 
+  
   public movieList:Movies[] = [];
 
   constructor(public http: HttpClient) {
