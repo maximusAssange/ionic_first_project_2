@@ -1,0 +1,92 @@
+<!--
+  Generated template for the DashboardPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>dashboard</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card padding (click)="setPanelDetail()">
+   
+    <div class="rightContainer" >
+      <div>{{name}}</div>
+      <div class="secondaryText">{{position}}</div>
+      <div class="secondaryText">{{period}}</div>
+    </div>
+    <ion-card-content class="with-no-pad-bot">
+      <div *ngIf="detailUser" ng-dblclick="return false" [@enterAnimation] >
+        <ion-row>
+            Detail
+        </ion-row>
+        <div>
+          A programmer learning ionic
+        </div>
+      </div>
+
+      <div class="center">
+        <ion-icon name="{{arrow_class}}"></ion-icon>
+      </div>
+    </ion-card-content>  
+  </ion-card>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col class="no-padding-col">
+        <ion-card padding (click)="goto(1)">
+          <ion-row>
+            <ion-col col-4>
+                <ion-icon name="thumbs-up" class="medium-icon"></ion-icon>
+            </ion-col>
+            <ion-col col-8>
+              <span class="medium-text">Vote</span>
+            </ion-col>
+          </ion-row>
+        </ion-card>
+      </ion-col>
+      <ion-col class="no-padding-col">
+          <ion-card padding (click)="goto(2)">
+              <ion-row>
+                <ion-col col-4>
+                    <ion-icon name="albums" class="medium-icon"></ion-icon>
+                </ion-col>
+                <ion-col col-8>
+                  <span class="medium-text">Explore</span>
+                </ion-col>
+              </ion-row>
+            </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="no-padding-col">
+          <ion-card padding (click)="goto(3)">
+              <ion-row>
+                <ion-col col-4>
+                  <ion-icon name="desktop" class="medium-icon"></ion-icon>
+                </ion-col>
+                <ion-col col-8>
+                  <span class="medium-text">Movies</span>
+                </ion-col>
+              </ion-row>
+            </ion-card>
+      </ion-col>
+      <ion-col class="no-padding-col">
+          <ion-card padding (click)="goto(4)">
+              <ion-row>
+                <ion-col col-4>
+                  <ion-icon name="keypad" class="medium-icon"></ion-icon>
+                </ion-col>
+                <ion-col col-8>
+                  <span class="medium-text">Other</span>
+                </ion-col>
+              </ion-row>
+            </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,68 @@
+page-vote {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    
+    ion-navbar{
+        text-align: center;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .swiper-container-horizontal>.swiper-pagination .swiper-pagination-bullet {
+        margin: 0;
+      }
+    .swiper-container-horizontal>.swiper-pagination {
+        display: flex;
+        bottom: 0px;
+        background-color: #dedede;
+        height: 5px;
+    }
+    .swiper-pagination-bullet {
+        width: 100%;
+        border-radius: 0;
+        background-color: white;
+        opacity: 1;
+    }
+    
+    .image-slide{
+        padding: 5px;
+    }
+
+    .swiper-wrapper{
+        height:70% !important;
+    }
+
+    .swiper-pagination{
+        display: none !important;
+    }
+
+    .slides{
+        height: auto !important;
+    }
+
+    .slide-zoom{
+        height: 100% !important;
+    }
+
+    .swiper-slide img{
+        max-height: 70%;
+        max-width: 70%;
+    }
+
+    div.rightContainer{
+        text-align: right;
+        font-size: 2.3em;
+        text-transform: uppercase;
+    }
+
+    div.secondaryText{
+        font-size: .3em;
+        color: rgb(63, 63, 63);
+    }
+
+    div.center{
+        padding-top: 5px;
+        text-align: center;
+    }
+    
+
+}
