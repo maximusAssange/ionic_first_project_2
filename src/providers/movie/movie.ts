@@ -17,12 +17,16 @@ export class MovieProvider {
   query: string; 
   
   public movieList:Movies[] = [];
-
+   
   constructor(public http: HttpClient) {
     this.baseUrl = 'https://api.themoviedb.org/3';
     this.apiKey = '7cbb5e10c593e2e8e635cf8b0b446bb6';
-  }
+  } 
+     
 
+
+
+  
   getNowPlaying(){
 
     this.query = '/movie/now_playing';
