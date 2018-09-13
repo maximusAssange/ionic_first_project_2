@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { MoviesHomePage } from '../pages/movies-home/movies-home';
 import { MovieProvider } from '../providers/movie/movie';
+import { SwipeVertical } from '../models/gesture.model';
 
 @NgModule({
   declarations: [

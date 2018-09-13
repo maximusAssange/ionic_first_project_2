@@ -24,7 +24,7 @@ page-movies-home {
     }
 
     .swiper-wrapper{
-        height:50vh !important;
+        height:40% !important;
     }
 
     .swiper-pagination{
@@ -46,13 +46,13 @@ page-movies-home {
 
     img{
         background-size:cover;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 80%;
-        height: 100%;
-        z-index: -20;
-        opacity: 0.5;
-        left: 50%; transform: translate(-50%,0); 
+        max-width: 80% !important;
+        max-height: 80% !important;
+    }
+
+    .title-section{
+        font-size: 2em;
+        text-transform: uppercase;
+        font-weight: bold;
     }
 }

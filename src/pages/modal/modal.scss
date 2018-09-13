@@ -1,0 +1,12 @@
+ion-backdrop{
+    visibility: visible !important;
+    z-index: 0 !important;
+}
+
+page-modal {
+    height: 40% !important;
+
+    bottom: 0 !important;
+    top: auto !important;
+    z-index: 20;
+}

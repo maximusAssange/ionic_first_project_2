@@ -14,13 +14,28 @@
 
 
 <ion-content padding>
-  <ion-slides pager="false" slidesPerView="1.2" spaceBetween="10" centeredSlides=true loop=true>
+  <div class="title-section" padding>
+    Now Playing
+  </div>
+  <ion-slides pager="false" slidesPerView="1.5" spaceBetween="-15" centeredSlides=true>
     <ion-slide *ngFor="let slide of movieNowPlaying"
                class="text-center slider-item" >
       <div class="slide-text">
         <img src="{{slide.poster_path}}">
         <h2>{{slide.title}}</h2>
-        <p>{{slide.vote_count}}</p>
+      </div>
+    </ion-slide>
+  </ion-slides>
+
+  <div class="title-section" padding>
+      Popular
+    </div>
+  <ion-slides pager="false" slidesPerView="2.5" spaceBetween="-15" centeredSlides=true>
+    <ion-slide *ngFor="let slide of moviePopular"
+               class="text-center slider-item" >
+      <div class="slide-text">
+        <img src="{{slide.poster_path}}">
+        <p>{{slide.title}}</p>
       </div>
     </ion-slide>
   </ion-slides>

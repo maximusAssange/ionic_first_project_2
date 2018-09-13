@@ -23,17 +23,16 @@ export class MovieProvider {
     this.apiKey = '7cbb5e10c593e2e8e635cf8b0b446bb6';
   } 
      
-
-
-
-  
   getNowPlaying(){
-
     this.query = '/movie/now_playing';
     return this.http.get<Movies[]>(this.baseUrl + this.query + '?api_key=' + this.apiKey);
     
   }
 
-
+  getPopular(){
+    this.query = '/movie/popular';
+    return this.http.get<Movies[]>(this.baseUrl + this.query + '?api_key=' + this.apiKey);
+    
+  }
 
 }

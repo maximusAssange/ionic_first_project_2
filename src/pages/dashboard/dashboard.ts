@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController, ModalOptions, Modal } from 'ionic-angular';
 import { VotePage } from '../vote/vote';
 import { trigger, style, animate, transition } from '@angular/animations';
 import { MoviesHomePage } from '../movies-home/movies-home';
@@ -37,18 +37,26 @@ export class DashboardPage {
   public period:String = "2017/2018";
   public detailUser:Boolean = false;
   public arrow_class:String = "arrow-down";
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private modal:ModalController) {
   
   }
 
   setPanelDetail(){
-    if(this.detailUser == true){
-      this.detailUser = false;
-      this.arrow_class = "arrow-down";
-    }else{
-      this.detailUser = true;
-      this.arrow_class = "arrow-up";
+    // if(this.detailUser == true){
+    //   this.detailUser = false;
+    //   this.arrow_class = "arrow-down";
+    // }else{
+    //   this.detailUser = true;
+    //   this.arrow_class = "arrow-up";
+    // }
+    const myModalOptions:ModalOptions = {
+      enableBackdropDismiss:false
     }
+
+    const myModal:Modal = this.modal.create('ModalPage', myModalOptions);
+
+    myModal.present();
+
   }
 
   goto(id:Number){
